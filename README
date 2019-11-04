@@ -7,3 +7,20 @@ the values of every node to its right; and both of its children nodes are either
 themselves or None (null) values. You are given a target integer value; write a function that
 finds the closest value to that target value contained in the BST. Assume that there will only
 be one closest value.
+
+Sample input: 
+    10  ,12
+    /\
+   5 15
+  /\ /\ 
+ 2 5 13 22
+/     \
+1     14
+Sample output: 13
+
+To run the test class
+
+1. Compile the classes using
+    java -cp >class path of junit4-4.12.jar>:. test/Tests.java source/TwoSum.java
+2. Run the test class
+    java -cp <class path of junit4-4.12.jar>:. org.junit.runner.JUnitCore test.Tests

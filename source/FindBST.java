@@ -1,3 +1,7 @@
+package source;
+
+import java.lang.Double;
+
 /**
  * Class which will hold the logic of finding the closest integer value in a binary
  * search tree
@@ -15,7 +19,7 @@ public class FindBST{
      * @param target - the target integer
      */
     public static int findBST(BST tree, int target){
-        return getCloser(tree, target, Double.MAX_Value);
+        return getCloser(tree, target, Double.MAX_VALUE);
     }
     
     /**
@@ -33,7 +37,7 @@ public class FindBST{
         if(target > tree.value && tree.right != null){
             return getCloser(tree.right, target, closest);
         }else if(target < tree.value && tree.left != null){
-            return getCloser(tree.left, targetm closest);
+            return getCloser(tree.left, target, closest);
         }
 
         return (int) closest; //target has been met or no children left that are closer
@@ -42,7 +46,7 @@ public class FindBST{
     /**
      * Inner class which holds the logic for a binary search tree
      */
-    class BST{
+    public static class BST{
         /** Integer value stored in the current node*/
         public int value;
         /** Left node which contains a smaller value than the current node*/
@@ -60,3 +64,4 @@ public class FindBST{
     }
 
 }
+
